@@ -1,0 +1,362 @@
+export PATH=/usr/local/bin:/home/jon/.local/bin:/home/jon/.config/emacs/bin:/opt/RimSort:/opt/yazi:/opt/mc-bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH
+export PATH=$PATH:$(find $HOME/bin -maxdepth 1 -type d | paste -sd ":" -)
+
+##############
+#  ENV Vars  #
+##############
+
+if [ -n "$ZSH"]; then
+    ZSH=$HOME/.oh-my-zsh
+fi
+
+ZSH_THEME="mh"
+HYPHEN_INSENSITIVE="true"
+DISABLE_AUTO_TITLE="true"
+COMPLETION_WAITING_DOTS="%F{grey}...%f"
+setopt nobanghist # Ignore commands starting with a bang (!) in 
+ZSH_WEB_SEARCH_ENGINES=( # Custom search engines
+    s "https://searxng.site/searxng/search?preferences=eJx1WMuO7DYO_ZqpTSGFzCTAIItaDTDbBJjsDVqibV5Loq8eVeX--qH8KEvt7kW7W0cSRVLkIdUKIvbsCcO9R4cezMWA6xP0eIcU-WJYgcE7ukseKraTwYh3ndSYf3q-kJXFzeT5Nd__9gkvFuPA-v7Xn__7-xKgw4Dg1XD_9RIHtHgPlGVcPIZkYmjYNQ6fTYR23a2ZGplj80B_Z5DhjX1_WXc1Ic5m00yhi-gbMNQ7K3-v20E_wCnUzXbqf8EEvPxM6OeGXBMpyv5lJbmOHEWRqTwbs4LrrqyUWj0ziyCDapM-cBxxDneNHYj2F00BWiOnoevJiRP_6KFvmsCKwFwtaoJ__Os_4ByEaxZMD2yajgyGDE_j1ZL37EtMrLzK9xoi-3KxA8VOQ9NQzMMwNs12YzJsyVD-aZoHaeSwQK6vlkxtNYya-v6Qv-h6U0rdNBZS1DR57NCj-HQ7WrwVgoBipqKMr9hTP0jusThixunT8LrEShBBy-8NlOsXKH-zpOQNYblPI37IPTc2BVLLOESIJFtYAspnRPdXuZF8m8QulJtRFCNdLH3HbXXEGz1rWMytXim8s96WhUlA-ebzLP-gKfvyODNKZMyVSf98FQd02nNWcb-JziNeA3fxCR6vmrxEX47D1fudJzcSqFLAPBcW9sy9KDUZmHMchUNwOWNZbqs0xUq4-xy0pBYXvqX3E2td-n-A1kP-bBoN-HpHhggJN-JtTLZPvhBFDooTycmfxCl8je3H_aAw8GGexLnH6MEFI4eVTjXchog3H7bThYZATeD2IX8MVK63T9uaEnCT3da6GeDwG-s5YJkUE6gRegpxWy4psvLGOXqOqT14jvOm1EqyPTYh6zI7B6rNWnHFGq_5815twUVS16AGNuDLZJT08HHKpFyIiTzOHFl8OWaX7LZFq9vDuU9q53KTMP8LnPY5mg_0SSO1zGP4DP5MXOuewcDJqzM6oVoC8Bv4sCbDUgrELfPn1Q-eP1kZ8MOBrW6ZfyBWXOngkcP5AHxq5x7tHjcToo-pLS98IUfx0Zgp7oltMTWDqvTK43MY-CSxVko0YlOQOCoxCbLR12y4QidxK3yio_Bjuk1Pd9xnkERRsXLQo_c4cSHrIeRjyKU9ibNjrVBpZVSy1syHXCGAR5171B6Jt974kPb0EN6pwn7sbz3vkX9BV1fQJVkWha5Zlb3eeQn2QmvwL3qUYdJKnCqw00EceffGxGWhdP3ZnwtaOX5BTg5uKbZSCnC3jCd0OTaxkKUG7EaWHuLtLSlpuX5WYdLC4Abu6jr3IMlpsbSsPizH-euQ2uJ6NET4pnxVRhT4E3P8-kMpjLNlJ37GA-sMqbEkbDmCSi6WceSd3XtppaA9BoeOmada9P0xh9JasD3iQXsEHT4XrdKmrVidrmrDKzs37HRdG_4FRQ6Q3boKWYvYpsBWt0pSHMUpEIo6atDaWcjY2pQ7joWu6oZvXZEC-u_mJg7xu7ksWRz9xbTUPvDzNXspUKHRxy_bVKHktpY7keck6UPpRbn3_lHFkAVpODW7b7R-Tw8Qhgj9Fyv0u9LSSxlO-ogbqVUjoS-yBqStyWEcMFZsv89JbZRghK2fq-elsGPREWRIiA4xSgu292EZzERXOGnSmdMPUZM089Lnbxsmyq8JDGXyTZk_yrqfx7fFqMO2iXLX00Lhe-mYlPiLnM6t0a7nuxWoyPDdH1QRLebbfHSh7TztXPjzKTRRClmAWsAKnbJnhU-J4kGarmsrvXIoOz25Ik3xdNOeY8xEIC0jY5HEASeC3cSjKHESZq7jQToUNbIwZ2f4ebxoUptcTHsS5vtw0sOtz6av-pw0oU_hHVfyZiQtrbJfk-fd4mTbZTukqh8q0M1nyQXpjcNQPk9gqIvXAtSunjl9ahfeyPvJAmSEbnM0F8seZHMcv8eZ2ivJAuQtS14fLZrwkRCE5MXtdL3l5OmSy0lIOnfpZancpxa3Hd57suk8WDDTUNccUvGDXcXZdrby_hHSeffnunr1_Pbbv1-HZJ00Fr3K8iKZyHAsjGWvHY0l8KKRnTQP1zA7dnJg8c5ijl1OOn8K2ScYM0jP4kpnxehv5D51NWenrvC5F1jgummIv-8v6uM_A5NJ0tiEe06M120b3Qbhf-lUsRGSMrCGc7UgoOkach2fZiTCG2ky1HiayeWoEbaXxJLceXdWX2ugwKgkd8T-JCdz_LbrNMfQrP-heXop62fl_FJZG3nFyxqbc_wiTw9h6Pv_AQ3I9bc=&q="
+    g "https://www.google.com/search?q="
+) 
+TIMER_FORMAT='[%d]'
+TIMER_THRESHOLD=1
+TIMER_PRECISION=2
+export DIRENV_LOG_FORMAT=
+VIRTUAL_ENV_DISABLE_PROMPT=1
+export KUBECONFIG="$HOME/.kube/config"
+export EDITOR=/usr/bin/emacs  
+
+###########
+# Plugins #
+###########
+
+plugins=(
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    # kubectl
+    # podman
+    # docker
+    direnv
+    pass
+    web-search
+    emoji
+    extract
+    #aws
+     )
+source $ZSH/oh-my-zsh.sh
+
+## Zoxide
+eval "$(zoxide init zsh --cmd cd)" # autocomplete for zoxide as cd replacement
+autoload -U add-zsh-hook 
+# shows the first 10 files in the current directory after changing directories
+  add-zsh-hook -Uz chpwd (){ ls -tch --color=always | head -10 } 
+
+
+##########
+# Prompt #
+##########
+
+# Show if we are on a remote or local tmux session
+emoji_tmux_status() {
+  if [[ -n "INSIDE_EMACS" ]]; then
+    echo $emoji[ox]
+  elif [[ -n "$TMUX" ]]; then
+    if [[ -n "$SSH_CONNECTION" ]]; then
+      echo $emoji[earth_africa] # Emoji for remote tmux session
+    else
+      # Emoji for local tmux session
+      echo $emoji[house]
+    fi
+    # Check if we are in a container session
+  elif [[ -f "/.dockerenv" || -f "/.podmanenv" ]]; then
+    echo $emoji[whale] # Emoji for container session
+  else 
+    # Emoji for bare metal session
+    echo $emoji[computer]
+  fi
+}
+
+# Show if the last command was successful or not
+function prompt_arrow() {
+  if [[ $? -eq 0 ]]; then
+    echo "%F{green}❯%f"
+  else
+    echo "%F{red}❯%f"
+  fi
+}
+
+# Prompt working directory indicator relative to /home/username/Desktop/workspace instead of /home/username and replacing the tilde with 'ws'
+function pwd_relative_to_workspace() {
+  local workspace_path="/home/jon/Desktop/workspace"
+  local current_path=$(pwd)
+
+  ## if the current path is a subdirectory of the workspace directory, show the relative path
+  if [[ $current_path == $workspace_path* && $current_path != $workspace_path ]]; then
+    echo "${current_path#$workspace_path/}"
+  elif [[ $current_path != $workspace_path ]]; then
+   echo "$current_path"
+  fi
+}
+
+# === Indicators ===
+
+
+# Prompt working directory indicator relative to /home/username/Desktop/workspace instead of /home/username and replacing the tilde with 'ws'
+function pwd_relative_to_workspace() {
+  local workspace_path="/home/jon/Desktop/workspace"
+  local current_path=$(pwd)
+
+  ## if the current path is a subdirectory of the workspace directory, show the relative path
+  if [[ $current_path == $workspace_path* && $current_path != $workspace_path ]]; then
+    echo "${current_path#$workspace_path/}"
+  elif [[ $current_path != $workspace_path ]]; then
+    echo "$current_path"
+  fi
+}
+
+
+
+PROMPT='%F{blue}%n%f@$(emoji_tmux_status):%F{blue}%"$(pwd_relative_to_workspace)$(prompt_arrow) '
+
+
+###########
+# Aliases #
+###########
+
+alias his="history | grep "
+alias watch="watch -n 0.5"
+alias ll="ls -lh"
+alias lsnu="ll --sort=time | head"
+alias nu='ls -t | head -1'
+alias h="helm --kubeconfig ~/.kube/admin.conf"
+alias n="nvim"
+alias gpt="tgpt --provider openai --key $(pass tgpt-api-key) --model gpt-4o-mini  --temperature 0.7"
+alias gpto="tgpt --provider openai --key $(pass tgpt-api-key) --model gpt-4o-2024-08-06  --temperature 0.7"
+alias gpt4="tgpt --provider openai --key $(pass tgpt-api-key) --model gpt-4-turbo  --temperature 0.7"
+alias wiggle="while :; do xdotool mousemove_relative -- $(( $RANDOM % 3 - 1 )) $(( $RANDOM % 3 - 1 )) sleep 60; done"
+alias neofetch="fastfetch"
+alias bt="bluetoothctl"
+alias cb="xsel --clipboard"
+alias e="emacsclient --no-wait"
+
+
+#############
+# Shortcuts #
+#############
+
+# unbinding back-i-search (ctrl-r)
+bindkey -r "^R"
+
+# unbinding ctrl-s
+bindkey -r "^S"
+
+
+############# 
+# Functions #
+#############
+
+# creats a softlink from the current directory / provided path to the workspace directory
+function cad {
+    if [ -z "$1" ]; then
+        ln -s $(pwd) /home/jon/Desktop/workspace/$(basename $(pwd))
+    else
+        ln -s $(realpath $1) /home/jon/Desktop/workspace/$(basename $(realpath $1))
+    fi
+}
+
+# if the ws function is called without arguments, it will cd into the workspace directory
+function ws {
+    if [ -z "$1" ]; then
+        cd /home/jon/Desktop/workspace
+    else
+        command ws "$@"
+    fi
+}
+
+function mk {
+    command mkdir $1 && cd $1
+  }
+
+function path {
+  echo $PATH | sed -e $'s/:/\\\n/g'
+}
+
+# shortcut for sudo !! including updating history
+sd() {
+    local last_command=$(fc -ln -1)
+    echo "sudo $last_command"
+    eval "sudo $last_command"
+    if [[ $? -eq 0 ]]; then
+        print -s -- "sudo $last_command"
+    fi
+}
+
+function fw-disable-kb(){
+  xinput list | awk '/Framework.*Keyboard|Framework.*Numpad/{if($0 ~ /id=/){split($0,a,"id=");split(a[2],b," ");print b[1]}}' | while read id; do xinput disable $id; done
+}
+#=====================#
+# Bluetooth functions #
+#=====================#
+
+# Show the paired and connected devices
+function btls {
+    local paired=$(bluetoothctl devices Paired | sed -n 's/Device //p' | sed -n 's [0-9A-F:]*  p')
+    local connected=$(bluetoothctl devices Connected | sed -n 's/Device //p' | sed -n 's [0-9A-F:]*  p')
+
+    while read -r line; do
+        if [[ $connected == *"$line"* ]]; then
+            print -P "%F{green}$line%f"
+        else
+            print -P "%F{red}$line%f"
+        fi
+  done <<< "$paired"
+}
+
+# Toggle the connection of a device from the list of paired devices
+function btcon {
+    if [[ -z "$1" ]]; then
+        echo "No device provided! Please use one of the following:"
+        btls
+        return 1
+    fi
+
+    # convert the variable to a MAC address if not already
+    if [[ $1 == *":"* ]]; then
+        echo "Provided device is already a MAC address"
+        device=$1
+    else
+        device=$(bluetoothctl devices Paired | grep "$1" | awk '{print $2}')
+    fi
+
+    if [[ $(bluetoothctl devices Connected | grep -c "$device") -eq 1 ]]; then
+        bluetoothctl disconnect "$device" > /dev/null
+    else
+        bluetoothctl connect "$device" > /dev/null
+    fi
+}
+
+# Completion function for btcon
+function _btcon_completion {
+    local -a devices
+    local IFS=$'\n'
+    devices=($(bluetoothctl devices Paired | sed -n 's/Device [0-9A-F:]* //p'))
+    _describe 'devices' devices
+}
+
+# Attach completion function to btcon
+compdef _btcon_completion btcon
+
+# ===
+# Emacs vterm integration
+# ===
+
+vterm_printf() {
+    if [ -n "$TMUX" ] \
+        && { [ "${TERM%%-*}" = "tmux" ] \
+            || [ "${TERM%%-*}" = "screen" ]; }; then
+        # Tell tmux to pass the escape sequences through
+        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+    elif [ "${TERM%%-*}" = "screen" ]; then
+        # GNU screen (screen, screen-256color, screen-256color-bce)
+        printf "\eP\e]%s\007\e\\" "$1"
+    else
+        printf "\e]%s\e\\" "$1"
+    fi
+}
+
+#======================#
+# Kubernetes functions # 
+#======================#
+function k {
+    kubectl "$@"
+}
+
+function kall {
+    k "$@" --all-namespaces
+}
+
+function klean {
+    k -n ${1} get rs -o=json | jq -r ".items[] | select(.status.replicas==0) | .metadata.name" | xargs -I {} k -n ${1} delete rs {}
+
+}
+
+function kwatch {
+    if [ -z "$1" ]; then
+        watch "kubectl get pods --all-namespaces"
+    else
+        watch "kubectl -n ${1} get ${2:-all}"
+    fi
+}
+
+function kwhere {
+    k get pods --all-namespaces -o=custom-columns=NAME:.metadata.name,NAMESPACE:.metadata.namespace,NODE:.spec.nodeName | grep ${1:-""} | sort
+}
+
+function kubens() {
+    # This is quite cursed and hacky.
+    # There are way more elegant ways to interface with kubectl than the fuck this is
+    # But this is now may workflow
+    # TODO either gain some sanity or make this a propper ZSH plugin
+
+    function kubens_generate_aliases() {
+      # Temporary file to hold the alias functions
+      local tmpfile="/tmp/kubens"
+
+      # Initial connectivity check with a timeout
+      if ! k get namespaces --request-timeout=5s &> /dev/null; then
+          echo "Unable to connect to Kubernetes cluster. Skipping alias creation."
+          rm -f "$tmpfile"
+          return 1
+      fi
+
+      # Initialize an associative array to track generated aliases
+      declare -A alias_tracker=()
+
+      # This function will create aliases for each namespace in the Kubernetes cluster
+      k get namespaces -o=jsonpath='{.items[*].metadata.name}' | tr ' ' '\n' | (cat; echo "") | while read ns; do 
+          if [[ $ns == kube-* ]]; then
+              stripped_ns="${ns#kube-}"
+          else
+              stripped_ns="${ns}"
+          fi
+          echo "Creating aliases for namespace '${ns}' with prefix '${stripped_ns:0:3}'"
+          local prefix="${stripped_ns:0:3}"
+          if [[ -n "${alias_tracker[k${prefix}]}" || -n "${alias_tracker[h${prefix}]}" ]]; then
+              echo "Collision detected for namespace '${ns}' with alias prefix '${prefix}'. Please manually create aliases for this namespace."
+              continue
+          fi
+
+          alias_tracker[k${prefix}]=1
+          alias_tracker[h${prefix}]=1
+
+          # Write the aliases to the temporary file
+          echo "alias k${prefix}='k -n ${ns}'" >> "$tmpfile"
+          echo "alias h${prefix}='helm --kubeconfig ~/.kube/admin.conf -n ${ns}'" >> "$tmpfile"
+      done
+      tmux send-keys "source $tmpfile" C-m
+    }
+
+    if [[ -n "$TMUX" ]] && [[ -f /tmp/kubens ]]; then
+        source /tmp/kubens
+        return 0
+    elif [[ -n "$TMUX" ]]; then
+        kubens_generate_aliases & disown
+        return 0
+    fi
+}
+
+
+#############
+# Autoloads #
+#############
+
+# >>>> Vagrant command completion (start)
+## Vagrant command completion
+fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
+
+# kubens
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/mc-bin/mc mc
